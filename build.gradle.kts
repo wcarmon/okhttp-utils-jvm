@@ -24,11 +24,15 @@ group = mvnGroupId
 version = mvnVersion
 
 configure<JavaPluginExtension> {
-    sourceCompatibility = JavaVersion.VERSION_11
-    targetCompatibility = JavaVersion.VERSION_11
+    sourceCompatibility = JavaVersion.VERSION_17
+    targetCompatibility = JavaVersion.VERSION_17
 }
 
 dependencies {
+    implementation("com.fasterxml.jackson.core:jackson-databind:2.16.0")
+    implementation("com.squareup.okhttp3:okhttp:4.12.0")
+    implementation("io.github.wcarmon:otel-utils-jvm:1.0.0")
+    implementation("io.opentelemetry:opentelemetry-api:1.33.0")
     implementation("org.jetbrains:annotations:24.1.0")
 
     testImplementation("org.junit.jupiter:junit-jupiter-api:5.10.1")
